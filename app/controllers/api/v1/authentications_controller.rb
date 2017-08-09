@@ -1,6 +1,7 @@
 module Api
   module V1
     class AuthenticationsController < ApplicationController
+      skip_before_action :authenticate_user
       def create
         token_command = AuthenticateUserCommand.call(*create_params.values)
 
