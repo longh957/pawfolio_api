@@ -4,6 +4,11 @@
 #
 version: 2
 jobs:
+  deployment:
+    production:
+      branch: master
+      heroku:
+        appname: pawfolio-api
   build:
     docker:
       # specify the version you desire here
@@ -60,8 +65,3 @@ jobs:
           path: /tmp/test-results
           destination: test-results
 
-  deployment:
-    production:
-      branch: master
-      heroku:
-        appname: foo-bar-123
