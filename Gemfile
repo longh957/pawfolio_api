@@ -23,8 +23,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker', '~> 1.7'
   gem 'rspec-rails'
-  gem 'terminal-notifier-guard'
   gem 'shoulda-matchers'
+  gem 'terminal-notifier-guard'
+  gem 'timecop'
 end
 
 group :development do
