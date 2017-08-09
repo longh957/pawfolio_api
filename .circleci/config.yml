@@ -2,13 +2,14 @@
 #
 # Check https://circleci.com/docs/2.0/language-ruby/ for more details
 #
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: foo-bar-123
+
 version: 2
 jobs:
-  deployment:
-    production:
-      branch: master
-      heroku:
-        appname: pawfolio-api
   build:
     docker:
       # specify the version you desire here
