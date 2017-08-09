@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/cbbf4fe/
+Api	app/controllers/api/v1/authentications_controller.rb	/^module Api$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::API$/;"	c
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+AuthenticateUserCommand	app/commands/authenticate_user_command.rb	/^class AuthenticateUserCommand < BaseCommand$/;"	c
+AuthenticationsController	app/controllers/api/v1/authentications_controller.rb	/^    class AuthenticationsController < ApplicationController$/;"	c	module:Api.V1
+BaseCommand	app/commands/base_command.rb	/^class BaseCommand$/;"	c
+DecodeAuthenticationCommand	app/commands/decode_authentication_command.rb	/^class DecodeAuthenticationCommand < BaseCommand$/;"	c
+JwtService	app/services/jwt_service.rb	/^class JwtService$/;"	c
+NotAuthorizedException	lib/exceptions/not_authorized_exception.rb	/^class NotAuthorizedException < StandardError; end$/;"	c
+TokenAuthenticatable	app/controllers/concerns/token_authenticatable.rb	/^module TokenAuthenticatable$/;"	m
+User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
+V1	app/controllers/api/v1/authentications_controller.rb	/^  module V1$/;"	m	module:Api
+authenticate_user	app/controllers/concerns/token_authenticatable.rb	/^  def authenticate_user$/;"	f	module:TokenAuthenticatable
+authorization_header	app/commands/decode_authentication_command.rb	/^  def authorization_header$/;"	f	class:DecodeAuthenticationCommand
+call	app/commands/base_command.rb	/^  def call$/;"	f	class:BaseCommand
+call	app/commands/base_command.rb	/^  def self.call(*args)$/;"	F	class:BaseCommand
+contents	app/commands/authenticate_user_command.rb	/^  def contents$/;"	f	class:AuthenticateUserCommand
+create	app/controllers/api/v1/authentications_controller.rb	/^      def create$/;"	f	class:Api.V1.AuthenticationsController
+create_params	app/controllers/api/v1/authentications_controller.rb	/^      def create_params$/;"	f	class:Api.V1.AuthenticationsController
+decode	app/services/jwt_service.rb	/^  def self.decode(token)$/;"	F	class:JwtService
+decoded_id	app/commands/decode_authentication_command.rb	/^  def decoded_id$/;"	f	class:DecodeAuthenticationCommand
+encode	app/services/jwt_service.rb	/^  def self.encode(payload)$/;"	F	class:JwtService
+errors	app/commands/base_command.rb	/^  def errors$/;"	f	class:BaseCommand
+initialize	app/commands/authenticate_user_command.rb	/^  def initialize(email, password)$/;"	f	class:AuthenticateUserCommand
+initialize	app/commands/base_command.rb	/^  def initialize(*_)$/;"	f	class:BaseCommand
+initialize	app/commands/decode_authentication_command.rb	/^  def initialize(headers)$/;"	f	class:DecodeAuthenticationCommand
+password_valid?	app/commands/authenticate_user_command.rb	/^  def password_valid?$/;"	f	class:AuthenticateUserCommand
+payload	app/commands/authenticate_user_command.rb	/^  def payload$/;"	f	class:AuthenticateUserCommand
+payload	app/commands/base_command.rb	/^  def payload$/;"	f	class:BaseCommand
+payload	app/commands/decode_authentication_command.rb	/^  def payload$/;"	f	class:DecodeAuthenticationCommand
+success?	app/commands/base_command.rb	/^  def success?$/;"	f	class:BaseCommand
+token	app/commands/decode_authentication_command.rb	/^  def token$/;"	f	class:DecodeAuthenticationCommand
+token_contents	app/commands/decode_authentication_command.rb	/^  def token_contents$/;"	f	class:DecodeAuthenticationCommand
+token_present?	app/commands/decode_authentication_command.rb	/^  def token_present?$/;"	f	class:DecodeAuthenticationCommand
+user	app/commands/authenticate_user_command.rb	/^  def user$/;"	f	class:AuthenticateUserCommand
+user	app/commands/decode_authentication_command.rb	/^  def user$/;"	f	class:DecodeAuthenticationCommand

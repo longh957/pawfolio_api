@@ -23,6 +23,7 @@ group :development, :test do
   gem 'faker', '~> 1.7'
   gem 'rspec-rails'
   gem 'terminal-notifier-guard'
+  gem 'shoulda-matchers'
 end
 
 group :development do
