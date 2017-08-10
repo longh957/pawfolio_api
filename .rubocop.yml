@@ -26,5 +26,8 @@ Style/VariableName:
 Style/MethodName:
   Enabled: false
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Documentation:
   Enabled: false
