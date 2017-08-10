@@ -62,6 +62,7 @@ GEM
     clipboard (1.1.1)
     coderay (1.1.1)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
     coolline (0.5.0)
       unicode_utils (~> 1.4)
     database_cleaner (1.6.1)
@@ -159,6 +160,8 @@ GEM
     rack-cache (1.6.1)
       rack (>= 0.4)
     rack-cors (1.0.1)
+    rack-protection (2.0.0)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.1.3)
@@ -245,6 +248,11 @@ GEM
     shellany (0.0.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    sidekiq (5.0.4)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (~> 3.3, >= 3.3.3)
     slop (3.6.0)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
@@ -306,6 +314,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   shoulda-matchers
+  sidekiq
   terminal-notifier-guard
   the_shocker
   timecop

@@ -22,6 +22,8 @@ gem 'redis-namespace'
 gem 'redis-rack-cache'
 gem 'redis-rails'
 
+gem 'sidekiq'
+
 group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
