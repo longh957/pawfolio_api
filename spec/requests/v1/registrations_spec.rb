@@ -23,7 +23,7 @@ RSpec.describe 'Registration Requests', type: :request do
   end
 
   describe 'PUT /api/v1/registration' do
-    let(:user) { FactoryGirl.create(:user, id: 1) }
+    let(:user) { create(:user, id: 1) }
     let(:params) { { name: 'jon snow', email: 'jon@winterfell.com' } }
     let(:header) do
       valid_user = AuthenticateUserCommand.call(user.email, 'password')
@@ -61,7 +61,7 @@ RSpec.describe 'Registration Requests', type: :request do
   end
 
   describe 'DELETE /api/v1/registration' do
-    let(:user) { FactoryGirl.create(:user, id: 1) }
+    let(:user) { create(:user, id: 1) }
     let(:valid_params) { { password: 'password' } }
     let(:header) do
       valid_user = AuthenticateUserCommand.call(user.email, 'password')
