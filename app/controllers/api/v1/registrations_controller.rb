@@ -21,7 +21,7 @@ module Api
       end
 
       def destroy
-        @current_user.delete
+        @current_user.delete if @current_user.authenticate(delete_params[:password])
         if @current_user.persisted?
           render json: { error: 'Bad Request' }, status: :bad_request
         else
@@ -37,6 +37,10 @@ module Api
 
       def update_params
         params.permit(:name, :email)
+      end
+
+      def delete_params
+        params.permit(:password)
       end
     end
   end
