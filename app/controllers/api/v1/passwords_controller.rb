@@ -3,17 +3,20 @@ module Api
     class PasswordsController < ApplicationController
       skip_before_action :authenticate_user
       def create
-        user = User.find_by(create_params)
-        user.generate_password_reset_token!
-        if user.password_reset_token.present?
+        set_user_by_email
+        @user.generate_password_reset_token!
+        if @user.password_reset_token.present?
           render json: { message: 'ok' }, status: :ok
         else
-          render json: { error: 'Bad Request' }, status: :bad_request
+          #TODO change exceptions to be more helpful
+          raise NotAuthorizedException
         end
+      rescue NotAuthorizedException
+        render json: { error: 'Bad Request' }, status: :bad_request
       end
 
       def update
-        #TODO raise error if token missin
+        raise NotAuthorizedException if update_params[:password].blank?
         set_user_by_token
         if @user.update(password: update_params[:password], password_reset_token: nil)
           render json: { message: 'ok' }, status: :ok
@@ -36,6 +39,11 @@ module Api
 
       def set_user_by_token
         @user = User.find_by(password_reset_token: update_params[:id])
+        raise NotAuthorizedException unless @user
+      end
+
+      def set_user_by_email
+        @user = User.find_by(create_params)
         raise NotAuthorizedException unless @user
       end
     end

@@ -23,7 +23,7 @@ RSpec.describe 'Registration Requests', type: :request do
   end
 
   describe 'PUT /api/v1/registration' do
-    let(:user) { create(:user, id: 1) }
+    let(:user) { create(:user, id: 2) }
     let(:params) { { name: 'jon snow', email: 'jon@winterfell.com' } }
     let(:header) do
       valid_user = AuthenticateUserCommand.call(user.email, 'password')
@@ -41,12 +41,12 @@ RSpec.describe 'Registration Requests', type: :request do
       end
 
       it 'should update the name' do
-        user = User.find(1)
+        user = User.find(2)
         expect(user.name).to eq('jon snow')
       end
 
       it 'should update the email' do
-        user = User.find(1)
+        user = User.find(2)
         expect(user.email).to eq('jon@winterfell.com')
       end
     end
@@ -61,7 +61,7 @@ RSpec.describe 'Registration Requests', type: :request do
   end
 
   describe 'DELETE /api/v1/registration' do
-    let(:user) { create(:user, id: 1) }
+    let(:user) { create(:user, id: 2) }
     let(:valid_params) { { password: 'password' } }
     let(:header) do
       valid_user = AuthenticateUserCommand.call(user.email, 'password')
@@ -79,7 +79,7 @@ RSpec.describe 'Registration Requests', type: :request do
       end
 
       it 'should delete the user' do
-        expect { User.find(1) }.to raise_exception(ActiveRecord::RecordNotFound)
+        expect { User.find(2) }.to raise_exception(ActiveRecord::RecordNotFound)
       end
     end
 
