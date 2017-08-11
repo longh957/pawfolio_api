@@ -21,7 +21,7 @@ gem 'redis', '~> 3.3'
 gem 'redis-namespace'
 gem 'redis-rack-cache'
 gem 'redis-rails'
-
+gem 'sendgrid-ruby'
 gem 'sidekiq'
 
 group :development, :test do
