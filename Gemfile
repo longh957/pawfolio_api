@@ -17,6 +17,12 @@ gem 'puma', '~> 3.7'
 gem 'rack-cors'
 gem 'rails', '~> 5.1.3'
 
+gem 'redis', '~> 3.3'
+gem 'redis-namespace'
+gem 'redis-rack-cache'
+gem 'redis-rails'
+gem 'sendgrid-ruby'
+gem 'sidekiq'
 group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'

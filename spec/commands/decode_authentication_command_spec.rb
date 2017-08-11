@@ -5,7 +5,7 @@ describe DecodeAuthenticationCommand do
     before { travel_to Time.zone.local(2017, 1, 1) }
     after { travel_back }
 
-    let!(:user) { FactoryGirl.create(:user, id: 1) }
+    let!(:user) { create(:user, id: 1) }
     let(:expired_header) do
       contents = {
         user_id: user.id,
@@ -46,7 +46,7 @@ describe DecodeAuthenticationCommand do
   end
 
   context 'Expired Token' do
-    let!(:user) { FactoryGirl.create(:user, id: 1) }
+    let!(:user) { create(:user, id: 1) }
     let(:expired_header) do
       contents = {
         user_id: user.id,

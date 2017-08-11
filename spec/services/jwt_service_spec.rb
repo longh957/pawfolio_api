@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-require 'pry'
 
 describe JwtService do
   subject { described_class }

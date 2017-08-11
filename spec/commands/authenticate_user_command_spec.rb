@@ -4,7 +4,7 @@ require 'rails_helper'
 require 'pry'
 
 describe AuthenticateUserCommand do
-  let!(:user) { FactoryGirl.create(:user, id: 1) }
+  let!(:user) { create(:user, id: 1) }
 
   context 'with correct user and password' do
     before { Timecop.freeze(2017, 1, 1, 0, 0, 1, 1) }
