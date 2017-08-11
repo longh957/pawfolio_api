@@ -14,13 +14,14 @@ module Api
 
       def update
         #TODO raise error if token missin
-        user = User.find_by(password_reset_token: update_params[:id])
-        if user.update(password: update_params[:password])
-          user.update(password_reset_token: nil)
+        set_user_by_token
+        if @user.update(password: update_params[:password], password_reset_token: nil)
           render json: { message: 'ok' }, status: :ok
         else
-          render json: { error: user.errors.full_messages }, status: :unprocessiable_entity
+          raise NotAuthorizedException
         end
+      rescue NotAuthroizedException
+        render json: { error: user.errors.full_messages || 'Not Authorized' }, status: :unprocessiable_entity
       end
 
       private
@@ -31,6 +32,11 @@ module Api
 
       def update_params
         params.permit(:password, :id)
+      end
+
+      def set_user_by_token
+        @user = User.find_by(password_reset_token: update_params[:id])
+        raise NotAuthorizedException unless @user
       end
     end
   end
