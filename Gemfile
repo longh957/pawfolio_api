@@ -23,7 +23,6 @@ gem 'redis-rack-cache'
 gem 'redis-rails'
 gem 'sendgrid-ruby'
 gem 'sidekiq'
-
 group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
