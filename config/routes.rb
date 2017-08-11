@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resource :authentication, only: %i[create]
       resource :registration, only: %i[create update destroy]
+      resources :passwords, only: %i[create update]
     end
   end
 end
