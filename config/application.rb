@@ -22,7 +22,7 @@ module PawfolioBackend
     config.load_defaults 5.1
 
     config.active_job.queue_adapter = :sidekiq
-    config.cache_store = :redis_store, ENV['REDISCLOUD_URL']
+    config.cache_store = :redis_store, ENV['REDIS_URL']
 
     config.filter_parameters += [:password, :jwt_token, :access_token, :sptoken, :email, :firstname, :lastname, :remove_email, :token]
 
