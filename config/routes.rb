@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resource :authentication, only: %i[create]
       resource :registration, only: %i[create update destroy]
       resources :passwords, only: %i[create update]
+      resources :pets
     end
   end
   require "sidekiq/web"

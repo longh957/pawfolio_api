@@ -10,6 +10,7 @@ end
 # gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'active_model_serializers', '~> 0.10.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt', '~> 1.5'
 gem 'pg', '~> 0.18'

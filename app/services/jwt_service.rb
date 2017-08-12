@@ -12,5 +12,7 @@ class JwtService
     HashWithIndifferentAccess.new(body)
   rescue JWT::ExpiredSignature
     nil
+  rescue
+    nil
   end
 end
