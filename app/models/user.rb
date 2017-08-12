@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :pets
   validates :email, presence: true, uniqueness: true
 
   def generate_password_reset_token!
