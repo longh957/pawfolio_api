@@ -5,7 +5,7 @@ module Api
 
       def create
         user = User.create(create_params)
-        if user.persisted?
+        if user && user.persisted?
           render json: { message: 'Success' }, status: :created
         else
           render json: { error: user.errors.full_messages }, status: :bad_request
